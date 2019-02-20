@@ -1,5 +1,5 @@
 let wins = 0;
-let loses = 0;
+let losses = 0;
 let score = 0;
 let valueGoal;
 
@@ -10,7 +10,7 @@ let greenGem = 0;
 
 
 function setup(){
-    var x = $(".target-num");
+    var x = $("#target-num");
     var valueGoal = Math.floor(Math.random() * (120 - 19) + 19);
     x.html(valueGoal)
     var blueGem = Math.floor(Math.random() * (12 - 1) + 1);
@@ -60,4 +60,47 @@ function addGreen(){
     score = score + greenGem;
     x.html(score);
 };
+
+$("#bluecrystal,#redcrystal,#orangecrystal,#greencrystal").click(compareValue);
+function compareValue(){
+    if (score == valueGoal) {
+        wins++;
+        console.log("Winner!");
+        var y = $("#score-num");
+        score = 0;
+        $("#bluecrystal,#redcrystal,#orangecrystal,#greencrystal").off();
+        setup();
+    }
+
+    if (score >= valueGoal) {
+        losses++;
+        console.log("Loser!");
+        var y = $("#score-num");
+        score = 0;
+        $("#bluecrystal,#redcrystal,#orangecrystal,#greencrystal").off();
+        setup();
+    }
+    
+    var winsOutput = $("#wins-num");
+    winsOutput.html(wins);
+
+    var lossesOutput = $("#losses-num");
+    lossesOutput.html(losses);
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+};
+
