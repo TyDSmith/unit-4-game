@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/reset.css">
+    <script src="/assets/javascript/game.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>Crystal Collector</title>
+</head>
+<body>
+    <div class="all-game">
+        <h1 id="game-title" class="content">Crystal Collector!</h1>
+        <div id="game-rules" class="content">
+                You will be given a random number at the start of the game.
+                <br><br>
+                By selecting one of the four crystals below you will add points to your score.
+                <br><br>
+                To win your score must equal the target number, if your score goes above the target you will lose.
+                <br><br>
+                The value of each crystal is hidden and every game gives the crystals a new value.
+        </div>
+        <div id="game-stats" class="content">
+            <div id="game-target">
+                Target: <span id="target-num"></span>
+            </div>
+            <div id="game-score">
+                Score: <span id="score-num"></span>
+            </div>
+            <br>
+        </div>
+        <div id="game-crystals">
+            <div class="crystal" id="bluecrystal">
+                <img src="./assets/images/bluecrystal.png" alt="blue crystal">
+            </div>
+            <div class="crystal" id="redcrystal">
+                <img src="./assets/images/redcrystal.png" alt="red crystal">
+            </div>
+            <div class="crystal" id="orangecrystal">
+                <img src="./assets/images/orangecrystal.png" alt="orange crystal">
+            </div>
+            <div class="crystal" id="greencrystal">
+                <img src="./assets/images/greencrystal.png" alt="green crystal">
+            </div>  
+        </div>
+        <div id="game-winslosses" class="content">
+                <div id="game-wins">
+                    Wins: <span id="wins-num"></span>
+                </div>
+                <div id="game-losses">
+                    Losses: <span id="losses-num"></span>
+                </div>
+                <br>
+            </div>
+    </div>
+</body>
+</html>
