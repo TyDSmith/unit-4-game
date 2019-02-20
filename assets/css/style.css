@@ -1,5 +1,13 @@
 .all-game{
     margin: 20px;
+    font-family: monospace;
+    font-size: 1.25em;
+}
+
+.all-game h1{
+    font-size: 1.25em;
+    font-weight: 600;
+    text-align: center;
 }
 .content{
     padding: 10px;
@@ -10,15 +18,12 @@
 
 #game-title{
     padding: 10px;
-
-
 }
 
 #game-rules{
     padding: 10px;
     border: solid 2px grey;
     background: rgba(39, 59, 67, 0.363);
-
 }
 
 #game-stats{
@@ -27,6 +32,15 @@
 #game-score{
     flex: 0.5;
 }
+
+#game-crystals{
+    display: flexbox;
+}
+
+.crystal{
+    flex: 0.25;
+}
+
 #game-target{
     flex: 0.5;
 }
